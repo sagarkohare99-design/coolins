@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Excellence University</title>
+    <link rel="stylesheet" href="style.css">
+   
+     
+</head>
+<style>
+    /* Basic Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #004d99bd;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    right:8rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    background: #0057b321;
+    color: #fff;
+    text-align: center;
+    padding: 0rem 0;
+      /* background-image:url(https://www.ieee.org/sites/default/files/styles/16_9_768x432/public/dam/q0hvghhrtf/technologies-page-hero.jpg.jpeg?itok=l9pDjT9k);   */
+    background-size:cover;
+    height: 400px;
+    
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #0056b3;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Main Content and Sidebar */
+.content-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 0;
+}
+
+.news-events {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #0056b3;
+    display: block;
+    padding: 8px 0;
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+select{
+    border:transparent;
+    background-color:transparent;
+    width: 20px;
+     position: relative;
+    top: 1.2remw;
+
+}
+
+marquee{
+    position: relative;
+    bottom:8rem;
+    color:red;
+    font-weight: bolder;
+}
+img{
+    height: 400px;
+    width: 100%;
+    
+}
+#h{
+     font-size: larger;
+     font-weight: 800;
+     position: relative;
+     left: 12rem;
+     bottom: 10px;
+     
+     
+     padding: 5px;
+}
+header{
+    position: sticky;
+  /* Once the element's top edge is at 0px from the viewport, it becomes fixed */
+  top: 0;
+  /* Other styles as before */
+  
+  width: 100%;
+  z-index: 1000;
+}
+
+
+
+
+
+ .slider {
+      position: relative;
+      
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      
+     
+    }
+    .slider img {
+      width: 100%;
+      
+      display: none;
+    }
+    .slider img.active {
+      display: block;
+    }
+    /* Arrow buttons */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: white;
+      background: rgba(0,0,0,0.5);
+      padding: 8px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+    }
+    .left {
+      left: 10px;
+    }
+    .right {
+      right: 10px;
+    }
+
+
+
+.dropdown-content {
+  display: none;
+}
+
+/* This class will be added by JavaScript */
+.show {
+  display: block;
+}
+
+
+/* Container for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* The button that triggers the dropdown */
+.dropbtn {
+  background-color: #4caf4f23;
+  color: white;
+  
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 10px;
+}
+
+/* The dropdown menu - hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.685);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+ 
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+   
+}
+
+/* Change color on hover for dropdown links */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu when the user hovers over the dropdown container */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carder{
+  height: 300px;
+  width: 200px;
+  border: 1px solid;
+  background-color: #0056b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.deva{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.is{
+  height: 200px;
+  width: 250px;
+}
+
+
+</style>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">P.D.N PATIL POLYTECHNIC</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a>
+                    <select name="fruite" id="">
+                        
+                         <option value="apple">CIVIL ENGINEERING</option>
+    <option value="banana">MECHANICAL ENGINEERING</option>
+    <option value="orange">ELECTRICAL ENGINEERING</option>
+    <option value="grape">COMPUTER ENGINEERING</option>
+                    </select></li>
+                    <li><a href="#">Admissions</a>
+                        <select name="" id="">
+                            <option value="">2025-26</option>
+                            <option value="">2026-27</option>
+                            <option value="">2027-28</option>
+                            
+                        </select>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Student Life</a>
+                        <select name="" id="">
+                            <option value="">Great vision</option>
+                            <option value="">Healthy surrounding </option>
+                            <option value="">Expert Faculties</option>
+                            
+                        </select>
+                    </li>
+                    <li><a href="#contact">Contact</a>
+
+                        <div class="dropdown">
+  <button class="dropbtn">Culture</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Robotics workshop</a>
+    <a href="#">Tech-c</a>
+    <a href="#">Annual gathering</a>
+  </div>
+</div>
+                        
+                    </li>
+                </ul>
+
+                
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="slider">
+    <img src="/assets/image1.jpg" class="active">
+    <img src="/assets/MECHANICAL-ENGINEERING.png">
+    <img src="/assets/im2.avif">
+    <img src="/assets/Electrical_Engineer_2_1920X10180.jpg">
+    
+    <!-- Arrows -->
+    <span class="arrow left" onclick="prevImage()">&#10094;</span>
+    <span class="arrow right" onclick="nextImage()">&#10095;</span>
+  </div>
+        <marquee behavior="" direction="">Admission open for 2025-26 for  All branches hurry up..............</marquee>
+        <div class="container">
+          
+           
+            <!-- <h2>Your Journey Starts Here</h2>
+            <p>Providing a world-class education for tomorrow's leaders.</p>
+            <a href="#" class="btn-primary">Apply Now</a> -->
+        </div>
+      
+    </section>
+
+    <main class="content-section">
+        <div class="container">
+            <div class="news-events">
+                <h3>Latest News & Events</h3>
+               
+                <div class="card">
+                     <h id="h">INDUCTION PROGRAM</h>
+                    <h4><img src="assets/WhatsApp Image 2025-09-21 at 10.56.12 AM.jpeg" alt=""></h4>
+                    <p> </p>
+                </div>
+                <div class="card">
+                    <h4>Annual Career Fair</h4>
+                    <video width="600" controls autoplay muted loop>
+    <source src="/assets/3129671-uhd_3840_2160_30fps.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+                  
+                    <p>Connect with top employers at our yearly career fair on Oct 25th. </p>
+
+                    <section id="about" class="section">
+      <div class="card card-pad">
+        <h2>About</h2>
+        <p>I’m a detail‑oriented engineer who enjoys solving real‑world problems—from structural detailing and planning to building simple, delightful web tools that speed up site workflows. I value clarity, reliability, and clean design.
+            A college is an institution of higher learning where students pursue specialized fields of study and earn academic degrees or certifications after completing high school. It offers opportunities for intellectual and personal growth, focusing on in-depth study of specific subjects and developing critical thinking skills through interactive classes and research. Beyond academics, colleges provide a vibrant student life with clubs, sports, and other activities, fostering social development and personal growth. 
+        </p>
+      </div>
+    </section>
+
+    
+                </div>
+            </div>
+            <section id="contact"><div class="card card-pad">Our Contact Address
+Feel free to reach out to us at P.D. Patil Institute of Polytechnic and Technology for inquiries, admissions, or collaborations. We’re here to assist you on your educational journey.
+
++91 8668958335
+4250poly@gmail.com
+PDP Institute Polytechnic and Technology College,
+Talegaon (S.P) Tq Arvi Dist wardha 442204</div></section>
+            <aside class="sidebar">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">Course Catalog</a></li>
+                    <li><a href="#">Academic Calendar</a></li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+    <h1>COURSES OFFER</h1>
+    <div class="deva">
+     
+      <br/>
+      <div class="card card-pad ">
+        <h3>CIVIL ENGINEERING</h3>
+        <img class="is" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3OJ4tw8qvwVGug1RMsJ72o3Itz1qLz4tujw&s" alt="">
+     <br>   <button class="btn btn-primary">Apply</button>
+      </div>
+      <div class="card card-pad "> 
+         <h3>MECHANICAL ENGINEERING</h3>
+        <img class="is" src="https://cdn.itm.ac.in/2024/05/mechanical-engineering-latest-trends-job-prospects-and-future-scopes.webp" alt="">
+         <br>   <button class="btn btn-primary">Apply</button>
+      </div>
+      <div class="card card-pad ">
+         <h3>ELECTRICAL ENGINEERING</h3>
+        <img class="is" src="https://www.owlguru.com/wp-content/uploads/wpallimport/files/electrical-engineers/__(1).jpg" alt="">
+         <br>   <button class="btn btn-primary">Apply</button>
+      </div>
+      <div class="card card-pad ">
+        <h3>COMPUTER ENGINEERING</h3>
+        <img class="is" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh90f64Rx3UATlmqcQRzkJugaeofMYy4WRybC7NDKk1Q_B6Azk4g8nPQ-ZmKvoEK1PoyU&usqp=CAU" alt="">
+         <br>   <button class="btn btn-primary">Apply</button> <button type="button" class="btn btn-success" >Enquiry</button>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Academic Excellence University. All Rights Reserved.</p>
+            
+        </div>
+        
+    </footer>
+      <!-- <script>
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
+let currentImageIndex = 0;
+const imageDisplay = document.getElementById("image-display");
+
+function changeImage(n) {
+  currentImageIndex += n;
+
+  if (currentImageIndex >= images.length) {
+    currentImageIndex = 0;
+  }
+  if (currentImageIndex < 0) {
+    currentImageIndex = images.length - 1;
+  }
+
+  imageDisplay.src = images[currentImageIndex];
+}
+      </script> -->
+
+      <script>
+    let index = 0;
+    const images = document.querySelectorAll(".slider img");
+
+    function showImage(i) {
+      images.forEach((img, idx) => {
+        img.classList.remove("active");
+        if (idx === i) img.classList.add("active");
+      });
+    }
+
+    function prevImage() {
+      index = (index - 1 + images.length) % images.length;
+      showImage(index);
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      showImage(index);
+    }
+  </script>
+
+  <script>
+    // A simple array of image file names
+const images1 = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
+
+// The current index of the image array
+let currentIndex = 0;
+
+// Get the <img> element by its ID
+const slideshowImg = document.getElementById("slideshow-img");
+
+// Function to change the image
+function changeImage() {
+    // Increment the index and use the modulo operator (%) to loop back to 0
+    // when the index exceeds the array length.
+    currentIndex = (currentIndex + 1) % images.length;
+    
+    // Update the 'src' attribute of the image element
+    slideshowImg.src = images[currentIndex];
+}
+
+// Set an interval to call the changeImage function every 3000 milliseconds (3 seconds)
+setInterval(changeImage, 3000);
+
+
+  
+  </script>
+
+   
+
+</body>
+</html>
